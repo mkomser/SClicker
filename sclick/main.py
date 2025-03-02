@@ -2,7 +2,7 @@ from sclick.controllers.app_controller import AppController
 from sclick.models.app_model import AppModel
 
 
-def main():
+def main() -> None:
     app_model = AppModel()
     controller = AppController(app_model)
     controller.run()

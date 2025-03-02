@@ -1,9 +1,7 @@
-from typing import TYPE_CHECKING
-
 from tkinter import Tk
 from tkinter.ttk import Frame
+from typing import TYPE_CHECKING
 
-# from sclick.views.base import View
 from sclick.enums import PageEnum
 from sclick.views.create_page import CreatePage
 from sclick.views.entry_page import EntryPage
@@ -33,10 +31,10 @@ class AppView:
 
         self.current_page = None
 
-    def run(self):
+    def run(self) -> None:
         self.root.mainloop()
 
-    def page_changed(self, page: PageEnum):
+    def page_changed(self, page: PageEnum) -> None:
         self.frame.destroy()
         self.frame = Frame(self.root, padding=10)
         self.frame.grid()

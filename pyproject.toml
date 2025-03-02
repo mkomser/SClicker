@@ -17,3 +17,14 @@ ruff = "^0.9.9"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+ignore = ["D100", "D101", "D102", "D103", "D105", "D106", "D107", "S311", "SIM103", "FIX002", "TD003", "TD002", "ANN101", "A003", "FA", "TRY003", "EXE002"]
+exclude = ["versions"]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.lint]
+select = ["ALL"]

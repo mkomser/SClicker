@@ -1,21 +1,25 @@
 {
-  "name": "s_click",
+  "name": "sclick",
   "context": "..",
   "dockerFile": "./Dockerfile",
   "customizations": {
     "vscode": {
       "extensions": [
-		"ms-python.python",
-		"ms-python.vscode-pylance",
-		"eamodio.gitlens"
-	]
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "njpwerner.autodocstring",
+        "charliermarsh.ruff",
+        "ms-python.debugpy",
+        "redhat.vscode-yaml"
+      ]
     }
   },
   "runArgs": [
     "--network",
     "host",
     "--name",
-    "s_click"
+    "sclick"
   ],
-  "remoteUser": "sclick"
+  "remoteUser": "sclick",
+  "postCreateCommand": "bash ${containerWorkspaceFolder}/.devcontainer/post_create.sh ${containerWorkspaceFolder}"
 }

@@ -5,17 +5,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name":"Run AutoClicker",
-      "type":"python",
-      "request":"launch",
-      "module":"AutoClicker.main",
+      "name": "Run Smart Clicker",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sclick.main",
       "python": "${command:python.interpreterPath}",
-      "justMyCode":false,
+      "justMyCode": false,
       "envFile": "${workspaceFolder}/.devcontainer/.env"
     },
     {
       "name": "Run Current File",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${file}",
       "console": "integratedTerminal",
